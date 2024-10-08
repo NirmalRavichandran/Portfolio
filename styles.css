@@ -135,3 +135,40 @@ h1, h2, h3, h4, h5 {
         margin-bottom: 20px; /* Adjust margin for mobile */
     }
 }
+
+.project-section {
+  padding-left: 40px;
+}
+
+.project-list {
+  padding-left: 0;
+}
+
+.project-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #f8f9fa;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-box h5 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-box a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.project-item {
+  margin-bottom: 15px;
+}

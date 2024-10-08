@@ -49,15 +49,54 @@
       
       <section id="about" class="reveal">
         <div class="container py-5">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <h4 class="pb-3">About me</h5>
-              <p class="pb-3">I'm a computer engineering student fueled by a fascination with how technology can transform our world. Whether I'm deciphering the intricate logic of circuits or unraveling the mysteries of machine learning algorithms, I'm constantly seeking to expand my knowledge. Coding is my creative outlet, allowing me to translate ideas into tangible applications. </p>
-              <p class="pb-3">As an AI enthusiast, I'm particularly intrigued by the potential of intelligent systems to solve complex problems and make a positive impact. I believe the future lies at the intersection of hardware and software, and I'm eager to contribute to its development by building the next generation of groundbreaking technology.</p>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h4 class="pb-3">About me</h4>
+                    <p class="pb-3">
+                        I'm a computer engineering student fueled by a fascination with how technology can transform our world. 
+                        Whether I'm deciphering the intricate logic of circuits or unraveling the mysteries of machine learning 
+                        algorithms, I'm constantly seeking to expand my knowledge. Coding is my creative outlet, allowing me to 
+                        translate ideas into tangible applications.
+                    </p>
+                    <p class="pb-3">
+                        As an AI enthusiast, I'm particularly intrigued by the potential of intelligent systems to solve complex 
+                        problems and make a positive impact. I believe the future lies at the intersection of hardware and software, 
+                        and I'm eager to contribute to its development by building the next generation of groundbreaking technology.
+                    </p>
+                </div>
+                <div class="col-md-6 project-section">
+                    <h4 class="pb-3">Projects</h4>
+                    <div class="project-list">
+                        <div class="project-item slide-in-right">
+                            <div class="project-box">
+                                <h5>Medical Chatbot using NLP</h5>
+                                <a href="https://github.com/yourusername/medical-chatbot" target="_blank" class="btn btn-outline-dark">
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-item slide-in-right">
+                            <div class="project-box">
+                                <h5>SportsHub App in Flutter</h5>
+                                <a href="https://github.com/yourusername/news-headline-app" target="_blank" class="btn btn-outline-dark">
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-item slide-in-right">
+                            <div class="project-box">
+                                <h5>Embedded System for IoT Devices</h5>
+                                <a href="https://github.com/yourusername/embedded-system-iot" target="_blank" class="btn btn-outline-dark">
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
+    
       <section id="skills" class="bg-light py-3 reveal">
         <div class="container">
           <div class="row p-5">
@@ -175,6 +214,24 @@
       observer.observe(section);
     });
   });
+
+// Function to reveal the project items on scroll
+function revealProjects() {
+    var projects = document.querySelectorAll(".slide-in-right");
+
+    for (var i = 0; i < projects.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = projects[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            projects[i].classList.add("show");
+        }
+    }
+}
+
+window.addEventListener("scroll", revealProjects);
+
 </script>
 
 </html>
