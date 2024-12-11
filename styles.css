@@ -1,14 +1,14 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'POPPINS', sans-serif;
   }
  
 h1, h2, h3, h4, h5 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'POPPINS', sans-serif;
     font-weight: 600; /* Makes headings bold */
 }
 
 .navbar-brand {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'POPPINS', sans-serif;
     font-weight: 600;
     color: #fff;
   }
@@ -33,21 +33,21 @@ h1, h2, h3, h4, h5 {
 }
 
 .banner h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'POPPINS', sans-serif;
     font-weight: 600;
     font-size: 3rem;
     color: #f0f8ff; /* Light color for the heading */
   }
   
   .banner h4 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'POPPINS', sans-serif;
     font-weight: 500;
     color: #dcdcdc; /* Light gray for subheading */
   }
   
   /* Card Titles */
   .card-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'POPPINS', sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
   }
@@ -171,4 +171,51 @@ h1, h2, h3, h4, h5 {
 
 .project-item {
   margin-bottom: 15px;
+}
+
+.home-sci {
+  position: absolute;
+  top: 80%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.home-sci a:hover{
+  color: #081b29;
+}
+.home-sci a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: .5s;
+}
+
+.home-sci a:hover::before{
+  width: 100%;
 }
